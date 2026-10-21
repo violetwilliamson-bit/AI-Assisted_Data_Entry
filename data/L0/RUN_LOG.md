@@ -45,7 +45,7 @@ Sites are built and handed off one at a time. The hand-check of a finished site 
 |---|---|---|---|---|---|---|
 | CA-CAR3 | 11 | yes | yes | done | done | **yes**: `CA-CAR3_inventory_data_2026_L0_26-10-21.xlsx` (297 trees, 27 disagreeing cells) |
 | SG-NES3 | 14 | no | no | no | not done (dropped) | no |
-| CC-CVN2 | 19 | yes | yes | pages 1-16 done; resume at page 17 | p1-8, p13-19 done; p9-12 none (stopped at spend limit; not rerun, user decision) | no |
+| CC-CVN2 | 19 | yes | yes | pages 1-17 done; resume at page 18 | p1-8, p13-19 done; p9-12 none (stopped at spend limit; not rerun, user decision) | no |
 | SG-NES1 | 20 | no | no | no | not done (dropped) | no |
 | CC-EMN1 | 11 | no | no | no | not done (dropped) | no |
 
