@@ -44,7 +44,7 @@ Sites are built and handed off one at a time. The hand-check of a finished site 
 |---|---|---|---|---|---|---|
 | CA-CAR3 | 11 | yes | yes | done | done | **yes**: `CA-CAR3_inventory_data_2026_L0_26-10-21.xlsx` (297 trees, 27 disagreeing cells) |
 | SG-NES3 | 14 | no | no | no | no | no |
-| CC-CVN2 | 19 | yes | yes | pages 1-3 done; resume at page 4 | 5 subagents started 2026-10-21 (p1-4, 5-8, 9-12, 13-16, 17-19) | no |
+| CC-CVN2 | 19 | yes | yes | pages 1-4 done; resume at page 5 | 5 subagents started 2026-10-21 (p1-4, 5-8, 9-12, 13-16, 17-19) | no |
 | SG-NES1 | 20 | no | no | no | no | no |
 | CC-EMN1 | 11 | no | no | no | no | no |
 
