@@ -29,7 +29,7 @@ Check: `sha256sum L0_DATA_ENTRY_PROCEDURE.md scripts/*.py scripts/READING_BRIEF.
 5. **Merge:** concatenate the reading2 parts into `<SITE>_reading2.csv`, copy reading1 to `<SITE>_reading1.csv`, then
    `.venv/bin/python scripts/compare_readings.py <SITE>_reading1.csv <SITE>_reading2.csv <SITE>_raw.csv`
 6. **Build** with `scripts/build_l0.py` (procedure step 5) into `data/L0/<SITE>/<SITE>_inventory_data_2026_L0_<YY-MM-DD>.xlsx`.
-7. **Hand off:** copy the workbook to `data/L0/checking/<same name>_CHECKING.xlsx` (user, 2026-10-21; the procedure says `data/L1/`) for the human check (procedure step 6). The L0 file is never edited.
+7. **Hand off:** copy the workbook to `data/L0/checking/<same name>.xlsx` (user, 2026-10-21; the procedure says `data/L1/`) for the human check (procedure step 6). The L0 file is never edited.
 
 ## Hand-checking while the run continues
 
