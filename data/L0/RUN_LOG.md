@@ -45,7 +45,7 @@ Sites are built and handed off one at a time. The hand-check of a finished site 
 |---|---|---|---|---|---|---|
 | CA-CAR3 | 11 | yes | yes | done | done | **yes**: `CA-CAR3_inventory_data_2026_L0_26-10-21.xlsx` (297 trees, 27 disagreeing cells) |
 | SG-NES3 | 14 | no | no | no | not done (dropped) | no |
-| CC-CVN2 | 19 | yes | yes | pages 1-17 done; resume at page 18 | p1-8, p13-19 done; p9-12 none (stopped at spend limit; not rerun, user decision) | no |
+| CC-CVN2 | 19 | yes | yes | done | p1-8, p13-19 done; p9-12 none (stopped at spend limit; not rerun, user decision) | **yes**: `CC-CVN2_inventory_data_2026_L0_26-10-21.xlsx` (534 trees, 53 disagreeing cells, 132 single-read trees noted once in the Issue Log) |
 | SG-NES1 | 20 | no | no | no | not done (dropped) | no |
 | CC-EMN1 | 11 | no | no | no | not done (dropped) | no |
 
@@ -53,7 +53,7 @@ Order: CA-CAR3, then CC-CVN2 (user, 2026-10-21), then SG-NES3, CC-EMN1, SG-NES1.
 
 **Resume note (2026-10-21):** the session was closed mid-site. The CA-CAR3
 second reading was started as three subagents (pages 1-4, 5-7, 8-11). All three parts
-finished before the session closed, so nothing needs rerunning. CA-CAR3 is built. CC-CVN2 started 2026-10-21.
+finished before the session closed, so nothing needs rerunning. CA-CAR3 is built. CC-CVN2 built 2026-10-21. Next: SG-NES3.
 
 ## Rule questions (for after the run)
 
@@ -70,3 +70,5 @@ finished before the session closed, so nothing needs rerunning. CA-CAR3 is built
 - CC-CVN2 p05: '11.6 11.7' written sideways in the left margin beside rows 1860-1862 (matches 1863's heights); not entered, flagged.
 - CC-CVN2 p06/p07 (sheet 6a/6b): p07 has a hand-drawn bracket labelled "DONE" in the margin beside 1866-1893, and p06 has margin checkmarks beside 1894-1898 (cross-references between the two copies; not entered).
 - CC-CVN2 p07 tag 1897: living-length dash with a hand-drawn loop around it. p08 tag 1926: a star drawn in the left margin (2nd reading).
+- CC-CVN2 build: Census_End = 2026-10-12 by the rule (latest header date; p15-17 are written '10/12/26'). Page 1 has no header date, so its rows default to Census_End = 2026-10-12 as well. Both follow the frozen rule; ask the user whether to rebuild with 2026-08-13.
+- CC-CVN2: from sheet 12 one crew writes 0 in Wounded Trunk (not in the 1-3 legend; each flagged) and 'A' in Height Method on many rows (flagged).

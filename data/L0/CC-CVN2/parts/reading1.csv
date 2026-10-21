@@ -527,3 +527,9 @@ tag,prev_tag_sheet,sp_code,height1,height2,height_method,dbh1,dbh2,dbh_hom,dbh_m
 2226,,,,,,,,,,,,D,S,,,,,,,,,,2026-10-12,Y,p17_b3,,,,,
 2227,,,14.8,14.5,H,19.1,-,0,T,4,C,OK,S,,-,,100,100,-,N,-,,2026-10-12,,p17_b3,,,,,
 2228,,,11.2,11.3,H,18.1,-,0,T,3,I,A,S,,-,,100,90,-,N,1,,2026-10-12,,p17_b3,"dbh1: first digits written over; reads 18.1, could be 10.1 | dbh_method: T written like J",,,,
+2229,,,8.2,8.4,H,7.6,-,0,T,2,I,A,S,10% yellow,-,,90,90,-,Y,1,,2026-08-12,,p18_b1,leaf_damage: Y written over N | wounded_trunk: 1 written like 7,,,,
+2230,,,10.8,10.8,H,11.6,-,0,T,2,I,A,S,sap 10% brown,-,,100,90,-,Y,-,,2026-08-12,,p18_b1,,,,,
+2231,,,16.0,16.0,H,19.2,-,0,T,3,C,A,S,15% brown,-,,100,100,-,Y,1,,2026-08-12,,p18_b1,height1: second digit written over; reads 16.0 | wounded_trunk: 1 written over another mark,,,,
+2232,,,9.1,9.3,H,9.1,-,0,T,2,I,A,S,90% brown,7.8/7.4,,70,40,-,Y,2,almost dead,2026-08-12,,p18_b1,"living_length: '7.8' and '7.4' written side by side, divided by a vertical line (entered as a/b) | pct_crown: first digit written over; reads 70, could be 10 | living_length: a vertical line also runs down into the row below",,,,
+2233,,,12.8,12.5,H,14.4,-,0,+,2,I,A,S,,-,,80,90,-,N,1,,2026-08-12,,p18_b1,dbh_method: written as + (not T/C); could be T | canopy_pos: I written over another mark | living_length: a dash with a vertical line through it (from the row above),,,,
+2234,,Pico,1.5,1.5,T,1.2,1.3,0,C,1,S,A,L,-,1.0,,0,0,20,N,@,nothing living above dbh,2026-08-13,,p19_b1,"wounded_trunk: a circled scribble (looks like a circled 0 or @); not readable, entered as '@' | geotag_ref: last digit(s) written over; reads 2077, could be 2074 | sp_code: written 'Pico' (mixed case) | comment: the comment has 'dbH' with a capital H",F,2077,2.4,331
