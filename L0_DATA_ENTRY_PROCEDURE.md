@@ -1,14 +1,14 @@
-# L0 Data Entry Procedure: Tree Census Datasheets
+# L0 Data Entry Procedure
 
 How to turn the scanned, handwritten tree census datasheets into L0 spreadsheets. L0 is a cell-for-cell record of what the field crew wrote, with nothing corrected or interpreted. Corrections belong at L1 and L2 (see `data/protocol/Data Entry Protocol.pdf`).
 
-On the messiest pages tested (CA-CAR3 sheets 6/9 to 9/9, 126 trees), the reading was 98.9% accurate before human checking: 28 errors in 2,520 handwritten cells, 24 of them already flagged for review.
+On the messiest handwritting pages tested (CA-CAR3 sheets 6-9/9, 126 trees), the AI scan/reading was 98.9% accurate before human checking: 28 errors in 2,520 handwritten cells, 24 of them already flagged for review.
 
 ## Who does what
 
-- **Reading the handwriting:** an AI assistant that can read images (Claude). The scripts do not read handwriting on their own.
-- **Building the workbook:** `scripts/build_l0.py` fills the template, checks every value against the sheet legends, and flags problems.
-- **Checking:** a person compares every flagged cell against the paper and corrects a separate copy.
+- **Reading the handwriting:** An AI assistant that can read images (Claude). The scripts do not read handwriting on their own.
+- **Building the workbook:** `scripts/build_l0.py` fills the Xcel template, checks every value against the sheet legends, and flags problems.
+- **Checking:** A human compares every flagged cell against the paper and corrects a separate copy.
 
 ## Inputs and outputs
 
@@ -53,11 +53,11 @@ File names follow `<plot_id>_inventory_data_<year>_L0_<YY-MM-DD created>.xlsx`, 
 
    The script takes identity columns from the prior inventory, checks codes and ranges, colours flagged cells yellow, and writes an Issue Log entry for each flag with a link to its cell.
 
-6. **Human check.** Compare every yellow cell, and spot-check the rest, against the paper. Correct a copy in `data/L1/`. Compare the corrected copy with L0 to measure accuracy and to find new rules.
+6. **Human check.** Compare every yellow cell, and spot-check the rest, against the paper. Correct a copy in `data/L1/`.
 
 ## Entry rules
 
-The core rule: **enter only what is handwritten, exactly as written.** Interpretations go in the Issue Log, never in the cell.
+**Enter only what is handwritten, exactly as written.** Interpretations go in the Issue Log.
 
 | On the sheet | In the cell |
 | --- | --- |
