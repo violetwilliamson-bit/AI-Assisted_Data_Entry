@@ -10,7 +10,7 @@ If any of these files change, the run is no longer on one procedure. Don't edit 
 
 | File | Hash |
 |---|---|
-| L0_DATA_ENTRY_PROCEDURE.md | 28e27c37cd95 |
+| L0_DATA_ENTRY_PROCEDURE.md | b896ea262260 (was 28e27c37cd95; 2026-10-21 merged the user's 2026-10-19 GitHub edit: wording only, no rule changed) |
 | scripts/READING_BRIEF.md | fde5feb0eb81 |
 | scripts/build_l0.py | 5ff8e00ebeb6 |
 | scripts/scan_crops.py | 565ed3e24d55 |
