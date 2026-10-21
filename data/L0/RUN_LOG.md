@@ -29,12 +29,12 @@ Check: `sha256sum L0_DATA_ENTRY_PROCEDURE.md scripts/*.py scripts/READING_BRIEF.
 5. **Merge:** concatenate the reading2 parts into `<SITE>_reading2.csv`, copy reading1 to `<SITE>_reading1.csv`, then
    `.venv/bin/python scripts/compare_readings.py <SITE>_reading1.csv <SITE>_reading2.csv <SITE>_raw.csv`
 6. **Build** with `scripts/build_l0.py` (procedure step 5) into `data/L0/<SITE>/<SITE>_inventory_data_2026_L0_<YY-MM-DD>.xlsx`.
-7. **Hand off:** copy the workbook to `data/L0/checking/<same name>.xlsx` (user, 2026-10-21; the procedure says `data/L1/`) for the human check (procedure step 6). The L0 file is never edited.
+7. **Hand off:** tell the user the site's workbook in `data/L0/<SITE>/` is ready to hand-check. No copy is made in the repo (user, 2026-10-21); the user checks their own copy, and the L0 file here is never edited.
 
 ## Hand-checking while the run continues
 
 Sites are built and handed off one at a time. The hand-check of a finished site does **not** change how later sites are done:
-- Corrections go only into the `data/L0/checking/` copy.
+- Corrections go only into the user's own copy, never into the L0 file here.
 - Any lesson from a check (a new rule or a reading pattern) is added to **Rule questions** below, tagged with the site it came from. It is not applied until all five sites are built.
 - After the run, the agreed rule changes become a new procedure version, and every site is re-checked against it the same way.
 
@@ -42,7 +42,7 @@ Sites are built and handed off one at a time. The hand-check of a finished site 
 
 | Site | Pages | Cropped | Mapped | Reading 1 | Reading 2 | Built |
 |---|---|---|---|---|---|---|
-| CA-CAR3 | 11 | yes | yes | done | done | **yes**: `CA-CAR3_inventory_data_2026_L0_26-10-21.xlsx` (297 trees, 27 disagreeing cells); check copy in `data/L0/checking/` |
+| CA-CAR3 | 11 | yes | yes | done | done | **yes**: `CA-CAR3_inventory_data_2026_L0_26-10-21.xlsx` (297 trees, 27 disagreeing cells) |
 | SG-NES3 | 14 | no | no | no | no | no |
 | CC-CVN2 | 19 | no | no | no | no | no |
 | SG-NES1 | 20 | no | no | no | no | no |
