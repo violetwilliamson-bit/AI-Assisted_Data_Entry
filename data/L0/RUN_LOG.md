@@ -34,7 +34,7 @@ Check: `sha256sum L0_DATA_ENTRY_PROCEDURE.md scripts/*.py scripts/READING_BRIEF.
 
 | Site | Pages | Cropped | Mapped | Reading 1 | Reading 2 | Built |
 |---|---|---|---|---|---|---|
-| CA-CAR3 | 11 | yes | yes | pages 1-2 of 11 done | pages 5-7 done; 1-4 and 8-11 pending | no |
+| CA-CAR3 | 11 | yes | yes | pages 1-2 of 11 done | pages 5-11 done; 1-4 pending | no |
 | SG-NES3 | 14 | no | no | no | no | no |
 | CC-CVN2 | 19 | no | no | no | no | no |
 | SG-NES1 | 20 | no | no | no | no | no |
@@ -43,8 +43,8 @@ Check: `sha256sum L0_DATA_ENTRY_PROCEDURE.md scripts/*.py scripts/READING_BRIEF.
 Order: CA-CAR3, SG-NES3, CC-EMN1, CC-CVN2, SG-NES1.
 
 **Resume note (2026-10-21):** the session was closed mid-site. The CA-CAR3
-second reading was started as three subagents (pages 1-4, 5-7, 8-11). Pages 5-7 finished
-(`reading2_p05-07.csv`). A part file exists only if its subagent finished before the session closed. Check
+second reading was started as three subagents (pages 1-4, 5-7, 8-11). Pages 5-7 and 8-11 finished
+(`reading2_p05-07.csv`, `reading2_p08-11.csv`). A part file exists only if its subagent finished before the session closed. Check
 `data/L0/CA-CAR3/parts/` and rerun any missing `reading2_*` part with the same
 assignment (pages, row_date, output path; see page_maps.md). Reading 1 resumes
 at CA-CAR3 page 3.
