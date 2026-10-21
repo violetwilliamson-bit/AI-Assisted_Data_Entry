@@ -44,15 +44,15 @@ Sites are built and handed off one at a time. The hand-check of a finished site 
 |---|---|---|---|---|---|---|
 | CA-CAR3 | 11 | yes | yes | done | done | **yes**: `CA-CAR3_inventory_data_2026_L0_26-10-21.xlsx` (297 trees, 27 disagreeing cells) |
 | SG-NES3 | 14 | no | no | no | no | no |
-| CC-CVN2 | 19 | no | no | no | no | no |
+| CC-CVN2 | 19 | yes | yes | started; resume at page 1 | 5 subagents started 2026-10-21 (p1-4, 5-8, 9-12, 13-16, 17-19) | no |
 | SG-NES1 | 20 | no | no | no | no | no |
 | CC-EMN1 | 11 | no | no | no | no | no |
 
-Order: CA-CAR3, SG-NES3, CC-EMN1, CC-CVN2, SG-NES1.
+Order: CA-CAR3, then CC-CVN2 (user, 2026-10-21), then SG-NES3, CC-EMN1, SG-NES1. Order does not affect the procedure.
 
 **Resume note (2026-10-21):** the session was closed mid-site. The CA-CAR3
 second reading was started as three subagents (pages 1-4, 5-7, 8-11). All three parts
-finished before the session closed, so nothing needs rerunning. CA-CAR3 is built. Next: crop and map SG-NES3.
+finished before the session closed, so nothing needs rerunning. CA-CAR3 is built. CC-CVN2 started 2026-10-21.
 
 ## Rule questions (for after the run)
 
@@ -64,3 +64,5 @@ finished before the session closed, so nothing needs rerunning. CA-CAR3 is built
 - CA-CAR3 p11 new-tree tags: zeros written over other marks make the tags look five-digit on the zoomed crop (86000 vs 8600); the second reader entered five digits. Entered 8600, 9903-9908 from the full page and flagged.
 - CA-CAR3 p10 tag 8587: a faint '15.9' written in the Height Method cell (entered as written, flagged).
 - After the run: update README, TREE_CENSUS_WORKING_FILE.md and the procedure, which still mention deleted files (data/archive/, old test set). User chose to wait (2026-10-21).
+- CC-CVN2 p15-17: header date written '10/12/26' (after the census; probably 8/12). Entered as written (row_date 2026-10-12) and flagged. Open: Census_End by rule = latest header date = 2026-10-12; decide with the user at build time.
+- CC-CVN2 p01: Notes box has a tally ('122 trees left + 73 trees needing ...'), not data; not entered.
