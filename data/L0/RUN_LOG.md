@@ -26,6 +26,7 @@ Check: `sha256sum L0_DATA_ENTRY_PROCEDURE.md scripts/*.py scripts/READING_BRIEF.
 2. **Map** pages (sheet number, header date, duplicates) into `data/L0/page_maps.md`.
 3. **First reading** (Claude, main session): `data/L0/<SITE>/parts/reading1.csv`, appended one page at a time.
 4. **Second reading** (separate subagents that never see reading 1, given `scripts/READING_BRIEF.md` and a page assignment): `data/L0/<SITE>/parts/reading2_pNN-NN.csv`.
+   **Dropped from 2026-10-21 (user decision, after the account hit its spend limit):** no new second readings. CA-CAR3 has a full second reading; CC-CVN2 has one for pages 1-8 and 13-19 only (the p9-12 subagent stopped at the limit and saved nothing); SG-NES3, CC-EMN1 and SG-NES1 get one reading. Each workbook's Issue Log states which pages were double-read. The user chose this knowing the second reading caught 15 of the 28 errors in the CA-CAR3 test.
 5. **Merge:** concatenate the reading2 parts into `<SITE>_reading2.csv`, copy reading1 to `<SITE>_reading1.csv`, then
    `.venv/bin/python scripts/compare_readings.py <SITE>_reading1.csv <SITE>_reading2.csv <SITE>_raw.csv`
 6. **Build** with `scripts/build_l0.py` (procedure step 5) into `data/L0/<SITE>/<SITE>_inventory_data_2026_L0_<YY-MM-DD>.xlsx`.
@@ -43,10 +44,10 @@ Sites are built and handed off one at a time. The hand-check of a finished site 
 | Site | Pages | Cropped | Mapped | Reading 1 | Reading 2 | Built |
 |---|---|---|---|---|---|---|
 | CA-CAR3 | 11 | yes | yes | done | done | **yes**: `CA-CAR3_inventory_data_2026_L0_26-10-21.xlsx` (297 trees, 27 disagreeing cells) |
-| SG-NES3 | 14 | no | no | no | no | no |
-| CC-CVN2 | 19 | yes | yes | pages 1-11 done; resume at page 12 | 5 subagents started 2026-10-21 (p1-4, 5-8, 9-12, 13-16, 17-19) | no |
-| SG-NES1 | 20 | no | no | no | no | no |
-| CC-EMN1 | 11 | no | no | no | no | no |
+| SG-NES3 | 14 | no | no | no | not done (dropped) | no |
+| CC-CVN2 | 19 | yes | yes | pages 1-11 done, p12 rows 2031-2051; resume at p12 band 3 | p1-8, p13-19 done; p9-12 none (stopped at spend limit; not rerun, user decision) | no |
+| SG-NES1 | 20 | no | no | no | not done (dropped) | no |
+| CC-EMN1 | 11 | no | no | no | not done (dropped) | no |
 
 Order: CA-CAR3, then CC-CVN2 (user, 2026-10-21), then SG-NES3, CC-EMN1, SG-NES1. Order does not affect the procedure.
 
