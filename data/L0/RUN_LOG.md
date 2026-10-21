@@ -44,7 +44,7 @@ Sites are built and handed off one at a time. The hand-check of a finished site 
 |---|---|---|---|---|---|---|
 | CA-CAR3 | 11 | yes | yes | done | done | **yes**: `CA-CAR3_inventory_data_2026_L0_26-10-21.xlsx` (297 trees, 27 disagreeing cells) |
 | SG-NES3 | 14 | no | no | no | no | no |
-| CC-CVN2 | 19 | yes | yes | pages 1-5 done; resume at page 6 | 5 subagents started 2026-10-21 (p1-4, 5-8, 9-12, 13-16, 17-19) | no |
+| CC-CVN2 | 19 | yes | yes | pages 1-7 done; resume at page 8 | 5 subagents started 2026-10-21 (p1-4, 5-8, 9-12, 13-16, 17-19) | no |
 | SG-NES1 | 20 | no | no | no | no | no |
 | CC-EMN1 | 11 | no | no | no | no | no |
 
@@ -67,3 +67,5 @@ finished before the session closed, so nothing needs rerunning. CA-CAR3 is built
 - CC-CVN2 p15-17: header date written '10/12/26' (after the census; probably 8/12). Entered as written (row_date 2026-10-12) and flagged. Open: Census_End by rule = latest header date = 2026-10-12; decide with the user at build time.
 - CC-CVN2 p01: Notes box has a tally ('122 trees left + 73 trees needing ...'), not data; not entered.
 - CC-CVN2 p05: '11.6 11.7' written sideways in the left margin beside rows 1860-1862 (matches 1863's heights); not entered, flagged.
+- CC-CVN2 p06/p07 (sheet 6a/6b): p07 has a hand-drawn bracket labelled "DONE" in the margin beside 1866-1893, and p06 has margin checkmarks beside 1894-1898 (cross-references between the two copies; not entered).
+- CC-CVN2 p07 tag 1897: living-length dash with a hand-drawn loop around it. p08 tag 1926: a star drawn in the left margin (2nd reading).
