@@ -63,3 +63,4 @@ finished before the session closed, so nothing needs rerunning. CA-CAR3 is built
 - CA-CAR3 p04 tag 8423 (2nd reading): '8422' written in the comment cell with an arrow from 8422's comment (handwriting linking two rows).
 - CA-CAR3 p11 new-tree tags: zeros written over other marks make the tags look five-digit on the zoomed crop (86000 vs 8600); the second reader entered five digits. Entered 8600, 9903-9908 from the full page and flagged.
 - CA-CAR3 p10 tag 8587: a faint '15.9' written in the Height Method cell (entered as written, flagged).
+- After the run: update README, TREE_CENSUS_WORKING_FILE.md and the procedure, which still mention deleted files (data/archive/, old test set). User chose to wait (2026-10-21).
