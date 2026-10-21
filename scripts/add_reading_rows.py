@@ -18,22 +18,23 @@ ORDER = ["tag", "height1", "height2", "height_method", "dbh1", "dbh2", "dbh_hom"
          "prev_tag_sheet", "sp_code", "geotagged", "geotag_ref", "geotag_dist", "geotag_dir"]
 
 out, row_date, src = sys.argv[1:4]
+# Check every line before writing any, so a bad line never leaves a partial page.
+rows = []
+for line in open(src):
+    line = line.rstrip("\n")
+    if not line.strip() or line.startswith("#"):
+        continue
+    parts = [p.strip() for p in line.split("|")]
+    if len(parts) not in (24, 30):
+        sys.exit(f"bad field count {len(parts)} (nothing written): {line}")
+    row = dict(zip(ORDER, parts))
+    row["unclear_flags"] = " | ".join(x.strip() for x in row["unclear_flags"].split(" ; ") if x.strip())
+    row["row_date"] = row_date
+    rows.append({c: row.get(c, "") for c in COLS})
 new = not os.path.exists(out)
 with open(out, "a", newline="") as f:
     w = csv.DictWriter(f, fieldnames=COLS)
     if new:
         w.writeheader()
-    n = 0
-    for line in open(src):
-        line = line.rstrip("\n")
-        if not line.strip() or line.startswith("#"):
-            continue
-        parts = [p.strip() for p in line.split("|")]
-        if len(parts) not in (24, 30):
-            sys.exit(f"bad field count {len(parts)}: {line}")
-        row = dict(zip(ORDER, parts))
-        row["unclear_flags"] = " | ".join(x.strip() for x in row["unclear_flags"].split(" ; ") if x.strip())
-        row["row_date"] = row_date
-        w.writerow({c: row.get(c, "") for c in COLS})
-        n += 1
-print(f"{n} rows appended to {out}")
+    w.writerows(rows)
+print(f"{len(rows)} rows appended to {out}")

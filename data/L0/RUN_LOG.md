@@ -15,7 +15,7 @@ If any of these files change, the run is no longer on one procedure. Don't edit 
 | scripts/build_l0.py | 5ff8e00ebeb6 |
 | scripts/scan_crops.py | 565ed3e24d55 |
 | scripts/compare_readings.py | be65cf1d36f3 |
-| scripts/add_reading_rows.py | 7ca03d008f2e |
+| scripts/add_reading_rows.py | c9288f320a11 (was 7ca03d008f2e; 2026-10-21 bug fix: a malformed line no longer leaves a partial page. Saving only, no rule change) |
 
 Check: `sha256sum L0_DATA_ENTRY_PROCEDURE.md scripts/*.py scripts/READING_BRIEF.md`
 
@@ -34,7 +34,7 @@ Check: `sha256sum L0_DATA_ENTRY_PROCEDURE.md scripts/*.py scripts/READING_BRIEF.
 
 | Site | Pages | Cropped | Mapped | Reading 1 | Reading 2 | Built |
 |---|---|---|---|---|---|---|
-| CA-CAR3 | 11 | yes | yes | pages 1-2 of 11 done | all 11 pages done; merged into `CA-CAR3_reading2.csv` | no |
+| CA-CAR3 | 11 | yes | yes | pages 1-4 of 11 done | all 11 pages done; merged into `CA-CAR3_reading2.csv` | no |
 | SG-NES3 | 14 | no | no | no | no | no |
 | CC-CVN2 | 19 | no | no | no | no | no |
 | SG-NES1 | 20 | no | no | no | no | no |
@@ -45,7 +45,7 @@ Order: CA-CAR3, SG-NES3, CC-EMN1, CC-CVN2, SG-NES1.
 **Resume note (2026-10-21):** the session was closed mid-site. The CA-CAR3
 second reading was started as three subagents (pages 1-4, 5-7, 8-11). All three parts
 finished before the session closed, so nothing needs rerunning. Reading 1 resumes
-at CA-CAR3 page 3.
+at CA-CAR3 page 5.
 
 ## Rule questions (for after the run)
 
