@@ -15,7 +15,7 @@ import csv
 import sys
 
 # Fields compared between the readings (everything except bookkeeping).
-SKIP = {"tag", "source", "unclear_flags"}
+SKIP = {"source", "unclear_flags"}
 
 
 def norm(v):
@@ -32,6 +32,20 @@ def main(r1_path, r2_path, out_path):
     rows1, by_tag1 = load(r1_path)
     rows2, by_tag2 = load(r2_path)
     fields = list(rows1[0].keys())
+    # A tag the readers read differently (e.g. a handwritten new-tree tag)
+    # leaves a row in each reading with no match. Pair those rows by their
+    # order on the same scan page, so the tag is flagged as a disagreement
+    # instead of the tree appearing twice.
+    page = lambda r: (r.get("source") or "").split("_")[0]
+    left1 = [r for r in rows1 if r["tag"].strip() not in by_tag2]
+    left2 = [r for r in rows2 if r["tag"].strip() not in by_tag1]
+    for r1 in left1:
+        same = [r2 for r2 in left2 if page(r2) == page(r1)]
+        if same:
+            r2 = same[0]
+            left2.remove(r2)
+            by_tag2[r1["tag"].strip()] = r2
+            by_tag1[r2["tag"].strip()] = r1
     n_dis = 0
     out = []
     for row in rows1:
@@ -41,11 +55,18 @@ def main(r1_path, r2_path, out_path):
         if other is None:
             notes.append("Row not found in the second independent reading - check the scan")
         else:
+            struck = norm(row.get("crossed_out")).upper() == "Y" == norm(other.get("crossed_out")).upper()
             for f in fields:
                 if f in SKIP:
                     continue
-                a, b = norm(row.get(f)), norm(other.get(f))
+                # Spacing between handwritten marks ("10% R" / "10%R") is not
+                # a reading difference; on a struck row a blank cell becomes
+                # "-" in the build, so blank and "-" are the same entry there.
+                a, b = (norm(row.get(f)).replace(" ", ""), norm(other.get(f)).replace(" ", ""))
+                if struck and {a, b} <= {"", "-"}:
+                    continue
                 if a != b:
+                    b = norm(other.get(f))
                     n_dis += 1
                     notes.append(f"{f}: second independent reading disagrees "
                                  f"(other read: '{b or 'blank'}') - check the scan")

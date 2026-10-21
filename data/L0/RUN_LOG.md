@@ -14,7 +14,7 @@ If any of these files change, the run is no longer on one procedure. Don't edit 
 | scripts/READING_BRIEF.md | fde5feb0eb81 |
 | scripts/build_l0.py | 5ff8e00ebeb6 |
 | scripts/scan_crops.py | 565ed3e24d55 |
-| scripts/compare_readings.py | be65cf1d36f3 |
+| scripts/compare_readings.py | d2c0bc308759 (was be65cf1d36f3; 2026-10-21 fixes before first use: rows whose tag the readers read differently are paired by page order, spacing-only and struck-row blank-vs-dash differences are not counted. No entry rule changed) |
 | scripts/add_reading_rows.py | c9288f320a11 (was 7ca03d008f2e; 2026-10-21 bug fix: a malformed line no longer leaves a partial page. Saving only, no rule change) |
 
 Check: `sha256sum L0_DATA_ENTRY_PROCEDURE.md scripts/*.py scripts/READING_BRIEF.md`
@@ -34,7 +34,7 @@ Check: `sha256sum L0_DATA_ENTRY_PROCEDURE.md scripts/*.py scripts/READING_BRIEF.
 
 | Site | Pages | Cropped | Mapped | Reading 1 | Reading 2 | Built |
 |---|---|---|---|---|---|---|
-| CA-CAR3 | 11 | yes | yes | pages 1-4 of 11 done | all 11 pages done; merged into `CA-CAR3_reading2.csv` | no |
+| CA-CAR3 | 11 | yes | yes | done | done | **yes**: `CA-CAR3_inventory_data_2026_L0_26-10-21.xlsx` (297 trees, 27 disagreeing cells) |
 | SG-NES3 | 14 | no | no | no | no | no |
 | CC-CVN2 | 19 | no | no | no | no | no |
 | SG-NES1 | 20 | no | no | no | no | no |
@@ -44,8 +44,7 @@ Order: CA-CAR3, SG-NES3, CC-EMN1, CC-CVN2, SG-NES1.
 
 **Resume note (2026-10-21):** the session was closed mid-site. The CA-CAR3
 second reading was started as three subagents (pages 1-4, 5-7, 8-11). All three parts
-finished before the session closed, so nothing needs rerunning. Reading 1 resumes
-at CA-CAR3 page 5.
+finished before the session closed, so nothing needs rerunning. CA-CAR3 is built. Next: crop and map SG-NES3.
 
 ## Rule questions (for after the run)
 
@@ -54,3 +53,5 @@ at CA-CAR3 page 5.
 - CA-CAR3 p05 tag 8452 (2nd reading): 'beetle' written above 'popcorn' as an insertion in DeathDam mode.
 - CA-CAR3 p06 tag 8475 (2nd reading): one word ('sappy') struck through inside a comment; the procedure covers lines through whole cells only.
 - CA-CAR3 p04 tag 8423 (2nd reading): '8422' written in the comment cell with an arrow from 8422's comment (handwriting linking two rows).
+- CA-CAR3 p11 new-tree tags: zeros written over other marks make the tags look five-digit on the zoomed crop (86000 vs 8600); the second reader entered five digits. Entered 8600, 9903-9908 from the full page and flagged.
+- CA-CAR3 p10 tag 8587: a faint '15.9' written in the Height Method cell (entered as written, flagged).
