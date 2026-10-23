@@ -46,7 +46,7 @@ Sites are built and handed off one at a time. The hand-check of a finished site 
 | CA-CAR3 | 11 | yes | yes | done | done | **yes**: `CA-CAR3_inventory_data_2026_L0_26-10-21.xlsx` (297 trees, 27 disagreeing cells) |
 | SG-NES3 | 14 | yes | yes | done | not done (dropped) | **yes**: `SG-NES3_inventory_data_2026_L0_26-10-23.xlsx` (421 trees: 408 + 13 new; single reading) |
 | CC-CVN2 | 19 | yes | yes | done | p1-8, p13-19 done; p9-12 none (stopped at spend limit; not rerun, user decision) | **yes**: `CC-CVN2_inventory_data_2026_L0_26-10-21.xlsx` (534 trees, 53 disagreeing cells, 132 single-read trees noted once in the Issue Log) |
-| SG-NES1 | 20 | no | no | no | not done (dropped) | no |
+| SG-NES1 | 20 | yes | yes | started 2026-10-23 | not done (dropped) | no |
 | CC-EMN1 | 11 | yes (from upright copy) | yes | done | not done (dropped) | **yes**: `CC-EMN1_inventory_data_2026_L0_26-10-23.xlsx` (312 trees: 302 + 10 new; single reading, noted in the Issue Log) |
 
 Order: CA-CAR3, then CC-CVN2 (user, 2026-10-21), then SG-NES3, CC-EMN1, SG-NES1. Order does not affect the procedure.

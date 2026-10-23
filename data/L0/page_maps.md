@@ -53,3 +53,19 @@ The PDF pages are stored rotated 90 degrees. Cropped from an upright copy (`data
 | 7 | 7/13 | 2026-08-06 | header has "8/5/26" and "8/6/26", entry time "9:30 on 8/6"; later date used, flagged |
 | 8-13 | 8/13-13/13 | 2026-08-06 | |
 | 14 | new trees ("14/13") | 2026-08-05 | |
+
+## SG-NES1 (20 pages; phone photos)
+
+| PDF page | Sheet | Header date (row_date) | Note |
+|---|---|---|---|
+| 1 | 1/16 | 2026-08-10 | Date field "8/9/26 8/10/26"; later date used, flagged |
+| 2 | 2/16 | 2026-08-09 | Date field "8/7/26 8/9/26" (two entry times); later date used, flagged |
+| 3-7 | 3/16-7/16 | 2026-08-07 | p3-5 Notes: "finished 8/7/26"; p5 Notes "BW=budworm" |
+| 8-11 | 8/16-11/16 | 2026-08-09 | p9 exit time "8/10/26 2:30" |
+| 12 | 12/16 | (none) | no header date -> census end |
+| 13 | "13a/16" | (none) | no header date -> census end |
+| 14 | "13b/16" | 2026-08-10 | Notes "new tree: 4728"; compare row by row with p13 and p15 |
+| 15 | "13b/16" (second scan) | 2026-08-10 | same sheet as p14 scanned again |
+| 16-18 | 14/16-16/16 | 2026-08-10 | Notes list new trees |
+| 19 | new trees | 2026-08-07 | Date "8/7/26" with "8/9/26 + JL Liam" beside Personnel; exit "8/10/26 2:30"; header Date field used, flagged |
+| 20 | new trees (second scan) | 2026-08-07 | same sheet as p19 scanned again |
