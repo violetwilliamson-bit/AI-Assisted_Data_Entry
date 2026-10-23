@@ -44,7 +44,7 @@ Sites are built and handed off one at a time. The hand-check of a finished site 
 | Site | Pages | Cropped | Mapped | Reading 1 | Reading 2 | Built |
 |---|---|---|---|---|---|---|
 | CA-CAR3 | 11 | yes | yes | done | done | **yes**: `CA-CAR3_inventory_data_2026_L0_26-10-21.xlsx` (297 trees, 27 disagreeing cells) |
-| SG-NES3 | 14 | yes | yes | started 2026-10-23 | not done (dropped) | no |
+| SG-NES3 | 14 | yes | yes | done | not done (dropped) | **yes**: `SG-NES3_inventory_data_2026_L0_26-10-23.xlsx` (421 trees: 408 + 13 new; single reading) |
 | CC-CVN2 | 19 | yes | yes | done | p1-8, p13-19 done; p9-12 none (stopped at spend limit; not rerun, user decision) | **yes**: `CC-CVN2_inventory_data_2026_L0_26-10-21.xlsx` (534 trees, 53 disagreeing cells, 132 single-read trees noted once in the Issue Log) |
 | SG-NES1 | 20 | no | no | no | not done (dropped) | no |
 | CC-EMN1 | 11 | yes (from upright copy) | yes | done | not done (dropped) | **yes**: `CC-EMN1_inventory_data_2026_L0_26-10-23.xlsx` (312 trees: 302 + 10 new; single reading, noted in the Issue Log) |
@@ -53,7 +53,7 @@ Order: CA-CAR3, then CC-CVN2 (user, 2026-10-21), then SG-NES3, CC-EMN1, SG-NES1.
 
 **Resume note (2026-10-21):** the session was closed mid-site. The CA-CAR3
 second reading was started as three subagents (pages 1-4, 5-7, 8-11). All three parts
-finished before the session closed, so nothing needs rerunning. CA-CAR3 is built. CC-CVN2 built 2026-10-21. CC-EMN1 built 2026-10-23. Next: SG-NES3, then SG-NES1.
+finished before the session closed, so nothing needs rerunning. CA-CAR3 is built. CC-CVN2 built 2026-10-21. CC-EMN1 built 2026-10-23. SG-NES3 built 2026-10-23. Next: SG-NES1.
 
 ## Rule questions (for after the run)
 
@@ -74,3 +74,5 @@ finished before the session closed, so nothing needs rerunning. CA-CAR3 is built
 - CC-CVN2: from sheet 12 one crew writes 0 in Wounded Trunk (not in the 1-3 legend; each flagged) and 'A' in Height Method on many rows (flagged).
 - CC-EMN1 sheet 6: header has two dates ('8/11/26, 8/14/26'); rows dated 8/14 (later date) and flagged. Which rows were done on which day is not marked.
 - CC-EMN1: the scan PDF pages are stored sideways; cropped from an upright copy made with pypdf (crop script unchanged). Several cells hold two codes ('L/B', 'S/B', 'A/X'); entered as written and flagged.
+- SG-NES3: many cells in Height/DBH Method written as 'J' (the reading notes say J is T); entered as written and flagged. Sheet 7/13 header has 8/5 and 8/6; dated 8/6.
+- SG-NES3 new trees (p14): several comments name a different neighbour tree than the Geotag Ref (e.g. 8216 'next to 8022', ref 7511); entered as written.

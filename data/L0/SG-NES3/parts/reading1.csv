@@ -407,3 +407,16 @@ tag,prev_tag_sheet,sp_code,height1,height2,height_method,dbh1,dbh2,dbh_hom,dbh_m
 8206,,,1.9,-,T,2.0,2.1,0,C,1,S,A,L,,-,,100,90,5,N,-,crown only on one side,2026-08-06,,p13_b1,deathdam_status: L written over another letter (could be E),,,,
 8207,,,18.0,18.2,H,28.6,-,0,T,4,I,A,S,,-,,100,90,-,N,1,,2026-08-06,,p13_b1,,,,,
 8208,,,3.8,-,T,6.0,5.8,0,C,3,S,A,S,BW,-,,100,90,-,Y,-,,2026-08-06,,p13_b1,a long pen line runs from the comment of 8207 to 8208 (not entered),,,,
+8209,,ABLA,1.7,-,T,1.4,1.4,0,C,3,S,A,S,5% red,-,,90,80,-,Y,-,curved at base (ref tree 7589),2026-08-05,,p14_b1,"new-trees sheet ('14/13'; Notes: 'New trees!'); header date 8/5/26 | this sheet has a different column layout from the main sheets (no Prev Tag; Geotag columns), so the crop column groups do not line up; read from the full page and crops C/D | a checkmark is written beside each row's comment in the right margin (not entered) | geotag_ref: last digit written over; reads 7589",F,7589,1.9,242
+8210,,ABLA,1.6,-,T,1.3,1.4,0,C,1,S,A,S,5% red,-,,90,90,-,Y,-,"next to 7902, zero illumination",2026-08-05,,p14_b1,geotag_ref: last digit written over; reads 7903,F,7903,.6,357
+8211,,ABLA,1.8,-,T,1.1,1.0,0,C,2,S,A,L,BW,-,,100,100,10°,Y,-,next to 7905,2026-08-05,,p14_b1,"geotag_ref: last digit written over; reads 7903, could be 7908 | geotag_dir: written '6°' with a degree sign",F,7903,1.6,6°
+8212,,PIEN,1.5,-,T,1.0,1.1,0,C,3,S,OK,S,-,-,,100,100,-,N,-,next to 7572 downhill,2026-08-05,,p14_b1,geotag_ref: last digit has an underline,F,7572,1.1,314
+8213,,PIEN,1.6,-,T,1.2,1.1,0,C,1,S,OK,S,-,-,,100,100,-,N,-,next to 7572,2026-08-05,,p14_b1,"geotag_dir: last digit written over; reads 245, could be 249",F,7572,.35,245
+8214,,PIEN,1.5,-,T,1.1,1.2,0,C,1,S,OK,S,-,-,,100,100,0,N,-,next to 7555,2026-08-05,,p14_b1,,F,7554,1.7,210
+8215,,ABLA,1.4,1->,T,1.5,1.6,0,C,1,S,A,S,BW 10% red,-,,40,60,0,Y,-,right next to 7948 dead top new lead,2026-08-05,,p14_b1,height2: written like '1->' (a 1 with an arrow) | comment: 'dead top new lead' written small above the right end | an arrow '<-' is drawn in the right margin pointing at this row (not entered),F,7949,1.2,135
+8216,,ABLA,1.6,-,T,1.1,1.1,0,C,2,S,OK,S,-,-,,100,100,0,N,-,right next to 8022,2026-08-05,,p14_b1,,F,7511,2.0,278
+8217,,ABLA,1.6,-,T,1.1,1.1,0,C,1,S,A,S,-,-,,100,90,0,Y,-,2 leader,2026-08-05,,p14_b1,,F,8049,0.1,182
+8218,,PIEN,1.6,-,T,1.1,1.1,0,C,2,S,A,S,-,-,,100,100,0,N,1,down slope from 8067,2026-08-05,,p14_b1,,F,8063,1.3,45
+8219,,PIEN,1.6,-,T,1.1,1.1,0,C,2,S,A,S,BW,-,,90,90,0,Y,1,down slope from 8122,2026-08-05,,p14_b1,,F,8121,2.0,310
+8220,,ABLA,1.7,-,T,1.8,1.8,0,C,1,S,A,S,20% red BW,-,,100,90,0,Y,1,"2 leaders, close to 8079",2026-08-05,,p14_b1,,F,8079,0.2,300
+8221,,ABLA,1.6,-,T,1.1,1.2,0,C,1,S,OK,S,-,-,,100,100,0,N,-,"upslope 8176, next to 8177",2026-08-05,,p14_b1,NEW SITUATION: comments and geotag refs disagree on several new trees (8216 comment 8022 vs ref 7511; 8217-8221 comment trees differ from refs); entered as written,F,8191,1.4,340
