@@ -30,3 +30,14 @@ script then uses the census end date and logs it).
 | 15-17 | "14"-"16" | 2026-10-12 | header written "10/12/26", entered as written and flagged (after the census; probably 8/12) |
 | 18 | 17/17 | 2026-08-12 | 5 trees (2229-2233), rest of page blank |
 | 19 | new trees | 2026-08-13 | header written "13-Aug-2026"; new-trees sheet (Geotag columns) |
+
+## CC-EMN1 (11 pages)
+
+The PDF pages are stored rotated 90 degrees. Cropped from an upright copy (`data/scans/CC-EMN1_..._upright.pdf`, made with pypdf, rotate 270; local only like all scans). The crop script is unchanged.
+
+| PDF page | Sheet | Header date (row_date) | Note |
+|---|---|---|---|
+| 1-5 | 1-5 | 2026-08-11 | p1 Notes: "129 trees left after day 1" |
+| 6 | 6 | 2026-08-14 | header written "8/11/26, 8/14/26" (two dates, two entry times); later date used, flagged |
+| 7-10 | 7-10 | 2026-08-14 | p10 has 5 rows (2598-2602) |
+| 11 | new trees | 2026-08-11 | 10 new trees (2603-2612), Geotag columns |
