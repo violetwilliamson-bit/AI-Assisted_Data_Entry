@@ -46,14 +46,14 @@ Sites are built and handed off one at a time. The hand-check of a finished site 
 | CA-CAR3 | 11 | yes | yes | done | done | **yes**: `CA-CAR3_inventory_data_2026_L0_26-10-21.xlsx` (297 trees, 27 disagreeing cells) |
 | SG-NES3 | 14 | yes | yes | done | not done (dropped) | **yes**: `SG-NES3_inventory_data_2026_L0_26-10-23.xlsx` (421 trees: 408 + 13 new; single reading) |
 | CC-CVN2 | 19 | yes | yes | done | p1-8, p13-19 done; p9-12 none (stopped at spend limit; not rerun, user decision) | **yes**: `CC-CVN2_inventory_data_2026_L0_26-10-21.xlsx` (534 trees, 53 disagreeing cells, 132 single-read trees noted once in the Issue Log) |
-| SG-NES1 | 20 | yes | yes | started 2026-10-23 | not done (dropped) | no |
+| SG-NES1 | 20 | yes | yes | done | not done (dropped) | **yes**: `SG-NES1_inventory_data_2026_L0_26-10-23.xlsx` (555 trees: 522 + 33 new; single reading) |
 | CC-EMN1 | 11 | yes (from upright copy) | yes | done | not done (dropped) | **yes**: `CC-EMN1_inventory_data_2026_L0_26-10-23.xlsx` (312 trees: 302 + 10 new; single reading, noted in the Issue Log) |
 
 Order: CA-CAR3, then CC-CVN2 (user, 2026-10-21), then SG-NES3, CC-EMN1, SG-NES1. Order does not affect the procedure.
 
 **Resume note (2026-10-21):** the session was closed mid-site. The CA-CAR3
 second reading was started as three subagents (pages 1-4, 5-7, 8-11). All three parts
-finished before the session closed, so nothing needs rerunning. CA-CAR3 is built. CC-CVN2 built 2026-10-21. CC-EMN1 built 2026-10-23. SG-NES3 built 2026-10-23. Next: SG-NES1.
+finished before the session closed, so nothing needs rerunning. CA-CAR3 is built. CC-CVN2 built 2026-10-21. CC-EMN1 built 2026-10-23. SG-NES3 and SG-NES1 built 2026-10-23. **All five sites are built.** Next: the user's hand-check, then the rule questions below.
 
 ## Rule questions (for after the run)
 
@@ -76,3 +76,5 @@ finished before the session closed, so nothing needs rerunning. CA-CAR3 is built
 - CC-EMN1: the scan PDF pages are stored sideways; cropped from an upright copy made with pypdf (crop script unchanged). Several cells hold two codes ('L/B', 'S/B', 'A/X'); entered as written and flagged.
 - SG-NES3: many cells in Height/DBH Method written as 'J' (the reading notes say J is T); entered as written and flagged. Sheet 7/13 header has 8/5 and 8/6; dated 8/6.
 - SG-NES3 new trees (p14): several comments name a different neighbour tree than the Geotag Ref (e.g. 8216 'next to 8022', ref 7511); entered as written.
+- SG-NES1: sheets 1/16, 2/16 and the new-trees sheet have two dates in the header; the later (or the Date field) was used and flagged. Sheet 13 is scanned three times (13a holds 4697-4727; two scans of 13b hold 4728-4729). Sheet 7/16 photo is curved, so right-hand columns drift by up to a row; rows matched by printed labels and comments, flagged.
+- SG-NES1 p19 vs p20: the new-trees sheet is photographed twice; read from p19 only.

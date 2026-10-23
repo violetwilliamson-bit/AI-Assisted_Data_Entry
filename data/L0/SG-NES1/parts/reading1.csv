@@ -521,3 +521,36 @@ tag,prev_tag_sheet,sp_code,height1,height2,height_method,dbh1,dbh2,dbh_hom,dbh_m
 4820,,,5.0,-,T,7.0,-,0,T,1,S,A,S,"BW, sappy",-,,90,90,0,Y,-,,2026-08-10,,p18_b3,,,,,
 4821,,,1.9,-,T,1.6,1.7,0,C,1,S,OK,S,,-,,100,100,0,N,-,,2026-08-10,,p18_b3,,,,,
 4822,,,2.1,-,T,2.3,2.4,0,C,1,S,A,S,BW,-,,100,80,0,Y,-,,2026-08-10,,p18_b3,,,,,
+4823,,ABLA,1.6,-,T,1.4,1.5,0,C,1,S,A,S,15% red,-,,80,80,-,Y,-,out of sequence uphill from 4454,2026-08-07,,p19_b1,"new-trees sheet: header Date '8/7/26' with '8/9/26 + JL Liam' beside Personnel and Exit Time '8/10/26 2:30'; header Date field used, flagged | Notes: '33 New trees!', 'skipped 1 added 11' (not entered) | PDF p20 is a second scan of this same sheet (compared; same handwriting); read from p19",F,4454,0.7,20°
+4824,,ABLA,1.6,-,T,1.0,1.0,0,C,1,S,A,S,,-,,100,90,-,N,N,out of sequence next to 4523,2026-08-07,,p19_b1,wounded_trunk: written as N (not in the 1-3 legend),F,4523,1.1,325°
+4825,,PIEN,1.6,-,T,1.2,1.2,0,C,1,S,A,S,BW 5% brown,-,,100,90,-,-,2,bent at base out of sequence,2026-08-07,,p19_b1,,F,4513,1.0,270°
+4826,,ABLA,1.5,-,T,1.0,0.9,0,C,1,S,A,L,BW,-,,100,90,15,Y,-,above 4533 out of sequence,2026-08-07,,p19_b1,geotag_ref: last digit written over; reads 4533,F,4533,2.2,30°
+4827,,ABLA,1.5,-,T,1.0,1.0,0,C,1,S,A,S,5% brown,-,,100,100,-,Y,-,next to 4593 out of sequence,2026-08-07,,p19_b1,geotag_dir: no handwriting,F,4593,0.4,
+4828,,PIEN,1.8,-,T,1.5,1.4,0,C,1,S,A,L,BW,-,,80,100,5,Y,1,next to 4520 out of sequence,2026-08-07,,p19_b1,geotag_ref: last digit written over; reads 4520,F,4520,1.8,10°
+4829,,PIEN,1.7,-,T,1.5,1.6,0,C,1,S,A,S,,-,,100,100,-,N,1,out of sequence next to 4326,2026-08-07,,p19_b1,geotag_ref: reads 4323 while the comment says 'next to 4326' (inconsistency on the sheet),F,4323,0.6,116°
+4830,,ABLA,1.8,-,T,1.3,1.4,0,C,2,S,A,S,BW,-,,100,100,-,Y,-,nearest 4630 out of sequence,2026-08-07,,p19_b1,,F,4630,0.9,260°
+4831,,ABLA,1.8,-,T,1.8,1.6,0,C,1,S,A,S,BW,-,,100,100,-,Y,-,nearest 4669 out of sequence maybe 4668?,2026-08-07,,p19_b1,comment: 'maybe 4668?' is circled | geotag_ref: reads 4656 while the comment names 4669/4668 | height1: last digit written over; reads 1.8,F,4656,0.9,310°
+4832,,ABLA,1.6,-,T,1.3,1.3,0,C,1,S,A,S,BW,-,,100,100,-,Y,-,out of sequence,2026-08-07,,p19_b2,,F,4658,1.2,90°
+4833,,ABLA,1.5,-,T,1.2,1.3,0,C,2,S,A,L,BW,-,,100,100,30,Y,-,out of sequence,2026-08-07,,p19_b2,,F,4658,4.6,100
+4834,,ABLA,1.5,-,T,1.1,1.2,0,C,1,S,A,S,5% yellow BW,-,,90,100,-,Y,-,out of sequence,2026-08-07,,p19_b2,pct_leaves: written like '160'; read as 100,F,4658,3.4,110
+4835,,ABLA,1.5,-,T,1.1,1.1,0,C,2,S,A,S,BW,-,,100,100,-,Y,-,bend at base,2026-08-07,,p19_b2,geotag_ref: digits heavily written over; reads 4801,F,4801,2.8,15
+4836,,ABLA,1.7,-,T,1.7,1.7,0,C,2,S,A,S,1% yellow,-,,100,100,-,Y,-,bend at base,2026-08-07,,p19_b2,,F,4801,2.8,15
+4837,,ABLA,1.6,-,T,1.4,1.6,0,C,1,S,A,L,bw,-,,100,90,5,Y,-,,2026-08-07,,p19_b2,tag: last digit written over (7 over another digit) | geotag_ref: last digit written over; reads 4585,F,4585,0.7,145°
+4838,,PIEN,1.6,-,T,1.2,1.3,0,C,1,S,OK,S,,-,,100,100,-,N,-,out of seq next to 4704,2026-08-07,,p19_b2,geotag_ref: last digit written over; reads 4704,F,4704,0.4,300°
+4839,,ABLA,1.6,-,T,1.1,1.1,0,C,1,S,A,S,BW 20% yellow,-,,100,100,-,Y,-,2 leaders out of sequence,2026-08-07,,p19_b2,,F,4704,.4,338°
+4840,,ABLA,1.6,-,T,1.2,1.2,0,C,1,S,A,S,BW,-,,100,100,-,Y,-,out of sequence next to 4704,2026-08-07,,p19_b2,a short dash is drawn in the left margin beside the row (not entered),F,4704,.5,20°
+4841,,ABLA,1.7,-,T,1.3,1.3,0,C,1,S,A,S,BW,-,,100,100,-,Y,-,"out of sequence, just upslope from 4729",2026-08-07,,p19_b2,,F,4729,2.0,15°
+4842,,ABLA,1.6,-,T,1.0,0.9,0,C,1,S,A,S,BW 10% red,-,,100,100,-,Y,-,"next to 4738, out of sequence",2026-08-07,,p19_b2,wounded_trunk: a dash with an arrowhead,F,4738,0.5,316°
+4843,,ABLA,1.7,-,T,1.0,1.0,0,C,1,S,A,S,BW,-,,100,100,-,Y,-,out of sequence next to 4788,2026-08-07,,p19_b2,,F,4788,.4,320°
+4844,,ABLA,1.9,-,T,1.2,1.2,0,C,1,S,A,S,BW,-,,100,100,-,Y,-,out of sequence uphill from 4788,2026-08-07,,p19_b2,comment: a line runs through 'uphill from 4788' (could be a strike-out),F,4788,2.2,333°
+4845,,ABLA,1.8,-,T,1.5,1.4,0,C,1,S,A,S,BW,-,,100,80,-,Y,-,out of sequence uphill from 4788,2026-08-07,,p19_b2,,F,4788,3.2,340°
+4846,,ABLA,1.7,-,T,1.5,1.5,0,C,1,S,A,S,BW,-,,100,90,-,Y,-,out of sequence uphill from 4790,2026-08-07,,p19_b3,,F,4790,2.9,300°
+4847,,ABLA,1.6,-,T,1.1,1.0,0,C,2,S,A,S,BW,-,,100,900,-,Y,-,out of sequence uphill from 4790 3 stems,2026-08-07,,p19_b3,pct_leaves: written like '900' (100 written over 9?); entered as written | comment: '3 stems' written small above 'from 4790',F,4790,3.0,333°
+4848,,PIEN,1.8,-,T,1.5,1.6,0,C,2,S,A,L,BW,-,,100,100,10,Y,-,out of sequence uphill from 4790 -,2026-08-07,,p19_b3,comment: 'new branch leader on broken tree' is written below and struck through; entered '-' for the struck part,F,4790,2.0,20°
+4849,,PIEN,1.9,-,T,1.4,1.4,0,C,1,S,A,S,BW,-,,100,100,-,Y,-,out of sequence next to 4796,2026-08-07,,p19_b3,,F,4796,.3,200°
+4850,,ABLA,1.6,-,T,1.1,1.1,0,C,2,S,A,S,BW,-,,100,100,-,Y,-,out of sequence next to 4796,2026-08-07,,p19_b3,,F,4796,.4,104°
+4851,,ABLA,1.7,-,T,1.5,1.4,0,C,2,S,A,L,BW,-,,100,100,10,Y,-,out of sequence uphill from 4801,2026-08-07,,p19_b3,,F,4801,1.2,350
+4852,,ABLA,1.9,-,T,1.5,1.5,0,C,1,S,A,L,,-,,100,100,20,N,-,out of sequence near 4801 touching 4800,2026-08-07,,p19_b3,,F,4801,.8,315
+4853,,ABLA,1.5,-,T,1.1,1.1,0,C,2,S,A,S,10% red,-,,100,100,-,Y,-,out of sequence near 4801,2026-08-07,,p19_b3,,F,4801,1.7,300
+4854,,ABLA,1.9,-,T,1.2,1.3,0,C,1,S,A,S,BW,-,,100,100,-,Y,-,out of sequence near 4804,2026-08-07,,p19_b3,,F,4804,1.4,265
+4855,,ABLA,1.7,-,T,1.2,1.3,0,C,1,S,A,S,BW,-,,100,90,-,Y,-,out of sequence near 4804,2026-08-07,,p19_b3,,F,4804,.9,260
