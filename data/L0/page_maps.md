@@ -41,3 +41,15 @@ The PDF pages are stored rotated 90 degrees. Cropped from an upright copy (`data
 | 6 | 6 | 2026-08-14 | header written "8/11/26, 8/14/26" (two dates, two entry times); later date used, flagged |
 | 7-10 | 7-10 | 2026-08-14 | p10 has 5 rows (2598-2602) |
 | 11 | new trees | 2026-08-11 | 10 new trees (2603-2612), Geotag columns |
+
+## SG-NES3 (14 pages; phone photos)
+
+| PDF page | Sheet | Header date (row_date) | Note |
+|---|---|---|---|
+| 1 | 1/13 | 2026-08-05 | written "Aug 5" (no year); Notes: "BW=budworm", "spp on 8221 ABLA" |
+| 2 | 2/13 | 2026-08-05 | |
+| 3 | 3/13 | (none) | no header date -> census end |
+| 4-6 | 4/13-6/13 | 2026-08-05 | |
+| 7 | 7/13 | 2026-08-06 | header has "8/5/26" and "8/6/26", entry time "9:30 on 8/6"; later date used, flagged |
+| 8-13 | 8/13-13/13 | 2026-08-06 | |
+| 14 | new trees ("14/13") | 2026-08-05 | |
