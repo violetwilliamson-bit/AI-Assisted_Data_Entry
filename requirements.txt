@@ -1,0 +1,9 @@
+# Python packages for the tree-census L0 pipeline.
+# Install:  python3 -m venv .venv && .venv/bin/pip install -r requirements.txt
+# Also needs pdftoppm (poppler-utils), already in the dev container.
+openpyxl==3.1.5                    # read/write the Excel template (build_l0.py)
+opencv-python-headless==5.0.0.93   # straighten and crop scans (scan_crops.py)
+numpy==2.4.6
+pillow==12.3.0                     # image resizing for the API (read_with_api.py)
+pypdf==6.19.0                      # rotate scans stored sideways (CC-EMN1)
+anthropic==2.2.0                   # Claude API (read_with_api.py only)
