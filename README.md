@@ -6,7 +6,6 @@ Turns scanned, handwritten tree census datasheets into digital L0 spreadsheets, 
 
 This repo covers only the **L0 step** of the Data Entry and Cleanup Protocol: turning the paper datasheets into a cell-for-cell digital record of what the field crew wrote. Corrections and cleanup happen later, at L1 and L2, as the protocol describes.
 
-- Shared protocol: <!-- paste the link to the lab's shared protocol here --> *(link to be added)*
 - Copy of the Data Entry Protocol used here: [data/protocol/Data Entry Protocol.pdf](data/protocol/Data%20Entry%20Protocol.pdf)
 - The L0 procedure this repo follows, step by step: [L0_DATA_ENTRY_PROCEDURE.md](L0_DATA_ENTRY_PROCEDURE.md)
 
@@ -14,13 +13,13 @@ This repo covers only the **L0 step** of the Data Entry and Cleanup Protocol: tu
 
 All five plots from the 2026 census have L0 workbooks in `data/L0/<site>/`. All were made with the same procedure, and each is waiting for its human hand-check.
 
-| Site | Trees | Pages read twice | L0 workbook |
+| Site | Trees | L0 workbook |
 |---|---|---|---|
-| CA-CAR3 | 297 | all | `CA-CAR3_inventory_data_2026_L0_26-10-21.xlsx` |
-| CC-CVN2 | 534 | 1-8, 13-19 | `CC-CVN2_inventory_data_2026_L0_26-10-21.xlsx` |
-| CC-EMN1 | 312 | none | `CC-EMN1_inventory_data_2026_L0_26-10-23.xlsx` |
-| SG-NES1 | 555 | none | `SG-NES1_inventory_data_2026_L0_26-10-23.xlsx` |
-| SG-NES3 | 421 | none | `SG-NES3_inventory_data_2026_L0_26-10-23.xlsx` |
+| CA-CAR3 | 297 | `CA-CAR3_inventory_data_2026_L0_26-10-21.xlsx` |
+| CC-CVN2 | 534 | `CC-CVN2_inventory_data_2026_L0_26-10-21.xlsx` |
+| CC-EMN1 | 312 | `CC-EMN1_inventory_data_2026_L0_26-10-23.xlsx` |
+| SG-NES1 | 555 | `SG-NES1_inventory_data_2026_L0_26-10-23.xlsx` |
+| SG-NES3 | 421 | `SG-NES3_inventory_data_2026_L0_26-10-23.xlsx` |
 
 - **Accuracy:** on the messiest test pages (CA-CAR3 sheets 6-9, 126 trees, 2,520 handwritten cells), the AI reading matched the hand-checked answer key in 99.1% of cells, and most differences were already flagged for review. A second, independent reading catches about half of the remaining errors.
 - **CC-EMN1:** its scan images were cut at half the resolution of the other sites, so check this site extra carefully.
