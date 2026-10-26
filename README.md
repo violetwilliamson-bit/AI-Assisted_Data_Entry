@@ -2,57 +2,92 @@
 
 Turns scanned, handwritten tree census datasheets into digital L0 spreadsheets, following the Data Entry and Cleanup Protocol — so the data doesn't have to be typed in by hand.
 
-## Status
+## Where this fits in the lab protocol
 
-All 4 plots for the 2026 census have been transcribed to L0:
+This repo covers only the **L0 step** of the Data Entry and Cleanup Protocol: turning the paper datasheets into a cell-for-cell digital record of what the field crew wrote. Corrections and cleanup happen later, at L1 and L2, as the protocol describes.
 
-| Site | Trees |
-|---|---|
-| SG-NES1 | 555 |
-| SG-NES3 | 421 |
-| CA-CAR3 | 297 |
-| CC-CVN2 | 534 |
+- Shared protocol: <!-- paste the link to the lab's shared protocol here --> *(link to be added)*
+- Copy of the Data Entry Protocol used here: [data/protocol/Data Entry Protocol.pdf](data/protocol/Data%20Entry%20Protocol.pdf)
+- The L0 procedure this repo follows, step by step: [L0_DATA_ENTRY_PROCEDURE.md](L0_DATA_ENTRY_PROCEDURE.md)
 
-These were made under the older entry rules and are now in `data/archive/2026-09_old_rules/`. They are being re-entered under the verbatim L0 rule below into `data/L0/`.
+## Status (October 2026)
 
-## How protocol works
+All five plots from the 2026 census have L0 workbooks in `data/L0/<site>/`. All were made with the same procedure, and each is waiting for its human hand-check.
 
-1. **Prepare images (script, no AI).** `scripts/scan_crops.py` renders each scan page, straightens it, and cuts it into 3 horizontal bands x 4 column groups (A: tag to CII, B: canopy to DeathDam mode, C: living length to wounded trunk, D: comment), each with the tag column attached. Each crop is small enough to be read without shrinking.
-2. **Read the handwriting (AI).** An AI assistant with image reading (Claude) opens each crop and types one row per tree into a raw CSV in `data/L0/<site>/`. This is the only step that uses AI, and the only step where judgment happens. No OCR software is involved.
-3. **Build the workbook (script, no AI).** `scripts/build_l0.py` copies the template, fills the identity columns from the prior census, writes the CSV values, and highlights and logs problems. It does not change any value.
-4. **Hand-check (person).** Check the L0 file against the paper sheets and rename it L1.
+| Site | Trees | Pages read twice | L0 workbook |
+|---|---|---|---|
+| CA-CAR3 | 297 | all | `CA-CAR3_inventory_data_2026_L0_26-10-21.xlsx` |
+| CC-CVN2 | 534 | 1-8, 13-19 | `CC-CVN2_inventory_data_2026_L0_26-10-21.xlsx` |
+| CC-EMN1 | 312 | none | `CC-EMN1_inventory_data_2026_L0_26-10-23.xlsx` |
+| SG-NES1 | 555 | none | `SG-NES1_inventory_data_2026_L0_26-10-23.xlsx` |
+| SG-NES3 | 421 | none | `SG-NES3_inventory_data_2026_L0_26-10-23.xlsx` |
 
-### L0 reading rule (from 2026-10-05)
+- **Accuracy:** on the messiest test pages (CA-CAR3 sheets 6-9, 126 trees, 2,520 handwritten cells), the AI reading matched the hand-checked answer key in 99.1% of cells, and most differences were already flagged for review. A second, independent reading catches about half of the remaining errors.
+- **CC-EMN1:** its scan images were cut at half the resolution of the other sites, so check this site extra carefully.
+- **Open rule questions** from the run are listed in [data/L0/RUN_LOG.md](data/L0/RUN_LOG.md).
 
-- Enter only what is **handwritten**, exactly as written: "190" stays 190, "0" stays 0, "w/" stays "w/", a letter in a number column stays a letter. Unless the 1 in front of the 90 looks like it has been erased, slightly lighter text next to darker text. 
-- Never enter pre-printed text: the small prior-census numbers, printed "NA", the Live/Dead labels, typed comments (unless circled), or the 9999 example row.
-- Site, tag, previous tag, tag date and species for continuing trees come from the prior-census file, as the data entry protocol says.
-- A cell with no handwriting stays blank and highlighted.
-- Handwriting crossed out by the crew stays out of the cell, blank and highlighted, and is described in the Issue Log.
-- Erased or overwritten marks: record the **darker** marks, the ones that remain. If only faint, erased-looking writing is left, the cell stays blank. Flag cells where it is unclear what is erased or actually written in the Issue Log, but there is no need to flag every cell where something was erased and written over, mistakes happen in the field. 
-- Out-of-range or invalid values are entered as written, highlighted and logged.
-- New-trees sheet (last page(s) of each site): it has no Prev Tag column, so Previous_Tag_Number is "NA". Its Geotag (T/F), Geotag Ref, Geotag Dist and Geotag Dir go into Geotagged, Geotag_Association_Ref, Geotag_Association_Dist and Geotag_Association_Dir.
-- Any interpretation goes only in the Issue Log, with a reference to the scan crop (e.g. `scan p01_b2`).
+## How it works
 
-The Issue Log has two extra columns in front of the template's: **Tag_Number** and **Cell** (e.g. `N8 (DBH_1_CM)`, a link that jumps to the flagged cell). Issues are listed in sheet order.
+| Step | What happens | Done by | Needs AI? |
+|---|---|---|---|
+| 1. Map the scan | Match each PDF page to its sheet number and header date, in `data/L0/page_maps.md` | Person | No |
+| 2. Crop | `scripts/scan_crops.py` straightens each page and cuts it into 12 zoomed strips | Script | No |
+| 3. Read | Transcribe every handwritten mark into a CSV, one row per tree | AI (or a person typing) | Yes, to avoid typing |
+| 4. Second reading (optional) | Read again independently; `scripts/compare_readings.py` flags every disagreement | AI + script | Yes |
+| 5. Build | `scripts/build_l0.py` fills the lab template, checks every value against the sheet legends, highlights problems and writes the Issue Log | Script | No |
+| 6. Hand-check | Compare flagged cells with the paper; correct a copy, which becomes L1 | Person | No |
 
-The four L0 files from September 2026 were made under the older rules and are archived. New L0 files go in `data/L0/<site>/`, starting with a pilot of SG-NES3 sheet 1.
+Step 3 is the only step that uses AI, and the only step where handwriting is interpreted. There are two ways to run it:
+
+- **Claude Code** (how the 2026 files were made): an AI assistant in this Codespace opens the strips and writes the CSV, following [scripts/READING_BRIEF.md](scripts/READING_BRIEF.md).
+- **The Claude API**, for anyone without Claude Code: `scripts/read_with_api.py` reads each page with the same instructions. It needs a lab API key and costs about $0.50 per page. See [API_READING.md](API_READING.md) for setup, costs and the accuracy test. *Built and tested offline; not yet run with a real key.*
+
+Without AI, a person can type the CSV by hand while viewing the strips from step 2 and still use every other step.
+
+## The L0 rule in short
+
+Enter **only what is handwritten, exactly as written**. Nothing pre-printed is entered, and nothing is corrected. Anything unclear or unusual is highlighted yellow and explained in the Issue Log, with a reference to the scan strip it came from. Corrections belong at L1 and L2. The full entry rules are in [L0_DATA_ENTRY_PROCEDURE.md](L0_DATA_ENTRY_PROCEDURE.md#entry-rules).
+
+## Setup
+
+Open the repo in GitHub Codespaces (the dev container installs the tools), or on your own machine:
+
+```
+python3 -m venv .venv
+.venv/bin/pip install -r requirements.txt
+```
+
+The crop script also needs `pdftoppm` (from poppler-utils), which the dev container already has.
 
 ## Repo layout
 
 ```
+L0_DATA_ENTRY_PROCEDURE.md   the L0 procedure and entry rules (start here)
+API_READING.md               reading the scans with the Claude API, with costs
+TREE_CENSUS_WORKING_FILE.md  working notes and history of the project
+requirements.txt             Python packages
+scripts/
+  scan_crops.py              step 2: straighten and crop scan pages
+  READING_BRIEF.md           step 3: instructions given to every reader
+  read_with_api.py           step 3 via the Claude API
+  add_reading_rows.py        helper for adding rows to a reading CSV
+  compare_readings.py        step 4: merge two readings, flag disagreements
+  build_l0.py                step 5: build the L0 workbook
+  score_against_key.py       score an L0 file against a hand-checked answer key
+tests/                       offline tests (.venv/bin/python -m unittest discover tests)
 data/
-  L0/<site>/        current L0 data (verbatim rule): raw CSV + L0 workbook per site
-  L1/               hand-checked L1 workbooks
-  archive/          superseded files (2026-09_old_rules: first L0 pass, older rules)
-  scans/            raw scanned datasheets (not committed; local only)
-  template/         the master spreadsheet template
-  last_inventory/   the prior census, used to carry forward continuing trees
-  protocol/         the Data Entry and Cleanup Protocol
-  work/images/      cropped scan images for reading (regenerable scratch; not committed)
-scripts/            the build pipeline
+  L0/<site>/                 L0 workbook, raw CSV and readings per site
+  L0/page_maps.md            page-to-sheet maps and header dates (step 1)
+  L0/RUN_LOG.md              log of the October 2026 run and open rule questions
+  L1/                        hand-checked L1 workbooks
+  test/                      CA-CAR3 test set with its hand-checked answer key
+  template/                  the lab's data entry template
+  last_inventory/            the 2021 L2 files, source of tag, species and tag date for continuing trees
+  protocol/                  the Data Entry and Cleanup Protocol
+  scans/                     raw scanned datasheets (local only, not in git)
+  work/images/               cropped images (regenerable, not in git)
 ```
 
 ## More detail
 
-See [TREE_CENSUS_WORKING_FILE.md](TREE_CENSUS_WORKING_FILE.md) for the full protocol summary, per-site notes, open questions, and progress log.
+[TREE_CENSUS_WORKING_FILE.md](TREE_CENSUS_WORKING_FILE.md) has the project history, per-site notes and the earlier rule decisions.
