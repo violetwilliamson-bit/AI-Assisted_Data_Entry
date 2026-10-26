@@ -1,6 +1,6 @@
 # Tree Census Data Entry Helper
 
-Turns scanned, handwritten tree census datasheets into digital L0 spreadsheets, following the lab's Data Entry and Cleanup Protocol — so the data doesn't have to be typed in by hand.
+Turns scanned, handwritten tree census datasheets into digital L0 spreadsheets, following the Data Entry and Cleanup Protocol — so the data doesn't have to be typed in by hand.
 
 ## Status
 
